@@ -22,6 +22,9 @@ This repository contains the official implementation of **KDC-MAE** (Knowledge D
 ## Overview
 KDC-MAE introduces a cutting-edge SSL framework that combines the strengths of contrastive learning, self-distillation, and masked data modeling to achieve superior performance across audio, video, and multimodal tasks. 
 
+### Paper Link
+The preprint of our paper is available on [arXiv](https://arxiv.org/abs/2411.12270).
+
 ### Architecture Diagram
 ![KDC-MAE Architecture](arch.png)
 
@@ -56,17 +59,16 @@ pip install -r requirements.txt
 
 ## Usage
 ### Data Preparation
-To Prepare the datasets (e.g., AudioSet, VGGSound, Kinetics-400) follow- https://github.com/yuangongnd/cav-mae?tab=readme-ov-file#data-preparation
+To Prepare the datasets (e.g., AudioSet, VGGSound, Kinetics-400), follow this [guide](https://github.com/yuangongnd/cav-mae?tab=readme-ov-file#data-preparation)
+
 
 
 ### Training
 Train the model with the desired configuration:
-```bash
-Check out egs/ for the training scripts of pretraining and finetuning
-```
+Check out `egs/` for the training scripts of pretraining and finetuning
 
-### Inpainting and Retrieval
-Check out src/retrieval.py and src/inpaint.py
+### Evaluation
+Check out src/retrieval.py and src/inpaint.py for respective evaluations. For classification evaluation use the finetune scripts in `egs/`.
 
 ---
 
@@ -92,11 +94,6 @@ KDC-MAE achieves state-of-the-art performance across multiple benchmarks:
 
 ## Requirements
 - Python >= 3.8
-- PyTorch >= 1.10
-- NumPy
-- torchvision
-- [Other dependencies as required]
-
 Install them using:
 ```bash
 pip install -r requirements.txt
